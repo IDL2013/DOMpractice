@@ -1,39 +1,18 @@
-// your JavaScript file
-const container = document.querySelector("#container");
+const link = document.querySelector("a");
 
-// create header
-const header = document.createElement("h3");
-header.classList.add("header");
-header.textContent = "I'm a blue h3!";
-header.style.color = "blue";
+link.textContent = "Mozilla Developer Network";
+link.href = "https://developer.mozilla.org";
 
-container.appendChild(header);
+const sect = document.querySelector("section");
+const para = document.createElement("p");
+para.textContent = "We hope you enjoyed the ride.";
+sect.appendChild(para);
 
-// create paragraph
-const paragraph = document.createElement("p");
-paragraph.classList.add("paragraph");
-paragraph.textContent = "Hey I'm red!";
-paragraph.style.color = "red";
+const text = document.createTextNode(
+    " — the premier source for web development knowledge.",
+  );
+  const linkPara = document.querySelector("p");
+  linkPara.appendChild(text);
 
-container.appendChild(paragraph);
-
-// create div
-const newDiv = document.createElement("div");
-
-newDiv.style.backgroundColor = "pink";
-newDiv.style.borderColor = "black";
-
-// add header to newDiv
-const header1 = document.createElement("h1");
-header1.classList.add("header1");
-header1.textContent = "I'm in a div!";
-newDiv.appendChild(header1);
-
-// add paragraph to newDiv
-const paragraph1 = document.createElement("p");
-paragraph1.classList.add("paragraph1");
-paragraph1.textContent = "ME TOO!";
-newDiv.appendChild(paragraph1);
-
-// append new div to container
-container.appendChild(newDiv);
+sect.appendChild(linkPara);
+para.setAttribute("class", "highlight");
